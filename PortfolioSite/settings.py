@@ -78,8 +78,14 @@ WSGI_APPLICATION = 'PortfolioSite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'PortfolioData'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'portfoliodata',
+        'USER': 'butcer0',
+        'PASSWORD': 'compuwhz',
+        'HOST': 'portfoliodbinstance.crmwiup4nfik.us-east-1.rds.amazonaws.com',
+        # 'HOST': 'localhost',
+        'PORT': '5432',
+        # 'NAME': os.path.join(BASE_DIR, 'PortfolioData'),
     }
 }
 

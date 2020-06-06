@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="AWS Postgresql PortfolioData" uuid="9329a5c1-3bfe-438e-8a93-a68dd9257655">
+      <driver-ref>greenplum</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/PortfolioSite/settings.py</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://portfoliodbinstance.crmwiup4nfik.us-east-1.rds.amazonaws.com:5432/portfoliodata</jdbc-url>
+    </data-source>
+  </component>
+</project>
