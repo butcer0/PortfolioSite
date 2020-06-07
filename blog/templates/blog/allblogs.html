@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="description" content="Erik Butcher's Portfolio">
+    <meta name="author" content="Erik Butcher">
     <meta name="generator" content="Jekyll v4.0.1">
-    <title>Album example · Bootstrap</title>
+    <title>Erik Butcher's Blog</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
@@ -44,8 +45,8 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Erik Butcher</a>
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'home' %}">Erik Butcher</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -53,13 +54,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Twitter</a>
+                    <a class="nav-link" href="https://www.linkedin.com/in/erik-butcher?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BaQmDX3xERc6qMWY5Y%2BmFBw%3D%3D">LinkedIn</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Resume</a>
+                    <a class="nav-link" href="{% static 'Resume_ERB_Tech.pdf' %}">Resume</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Blog</a>
+                    <a class="nav-link" href="{% url 'blog:home' %}">Blog</a>
                 </li>
 
             </ul>
@@ -75,7 +76,7 @@
         <h2>Latest Posts</h2>
         <hr />
         {% for blog in blogs.all %}
-            <a href=""><h3>{{ blog.title }}</h3></a>
+            <a href="{% url 'blog:detail' blog.id %}"><h3>{{ blog.title }}</h3></a>
             <p>{{ blog.pub_date_pretty }}</p>
             <br />
             <img class="image-fluid" src="{{ blog.image.url }}" height="100" width="100"/>
